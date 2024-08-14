@@ -14,8 +14,9 @@ const Inventory = () => {
       setLoading(false);
     })
   }, []);
+
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical" style={{width: "100%"}}>
     <Typography.Title level={4}>Inventory</Typography.Title>
     <Table columns={[
       {
@@ -52,11 +53,10 @@ const Inventory = () => {
     loading={loading}
     dataSource={dataSource}
     pagination= {{
-      pageSize: 6,
+      pageSize: 5,
       showTotal: (total) => `Total ${total} users`,
     }}
     >
-
     </Table>
     </Space>
   )

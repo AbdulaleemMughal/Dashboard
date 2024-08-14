@@ -18,7 +18,7 @@ const Order = () => {
 
   return (
     <Space size={20} direction="vertical">
-    <Typography.Title level={4}>Inventory</Typography.Title>
+    <Typography.Title level={4}>Recent Orders</Typography.Title>
     <Table columns={[
       {
         title: "Title",
