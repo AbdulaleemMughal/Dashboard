@@ -7,6 +7,7 @@ import {
   DollarOutlined,
 } from "@ant-design/icons";
 import { getCustomers, getData, getInventory, getOrders } from "../utils/Api";
+import Linechart from "../components/Linechart";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -41,7 +42,7 @@ const DashBoard = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <Space direction="vertical" size={20}>
         <Typography.Title level={4}>DashBoard</Typography.Title>
         <Space direction="horizontal">
@@ -106,14 +107,23 @@ const DashBoard = () => {
             value={revenue}
           />
         </Space>
-        <Space direction="horizantal" size={100}>
+        <Typography.Text style={{ fontSize: 20, fontWeight: "bold" }}>
+          Recent Orders
+        </Typography.Text>
+        <Space
+          direction="horizantal"
+          size={100}
+          style={{ alignItems: "center" }}
+        >
           <RecentOrders />
           <Card>
             <DashboardChart />
           </Card>
         </Space>
+        {/* component here */}
+        <Linechart />
       </Space>
-    </>
+    </div>
   );
 };
 
@@ -142,9 +152,6 @@ const RecentOrders = () => {
 
   return (
     <>
-      <Typography.Text style={{ fontSize: 20, fontWeight: "bold" }}>
-        Recent Orders
-      </Typography.Text>
       <Table
         columns={[
           {
@@ -170,11 +177,24 @@ const RecentOrders = () => {
 
 const DashboardChart = () => {
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
     datasets: [
       {
-        label: "Branch",
-        data: [100, 200, 300, 154, 150, 150, 390, 233, 989, 123, 123, 454],
+        label: "Revenue",
+        data: [100, 200, 300, 154, 150, 150, 390, 233, 500, 123, 123, 454],
         backgroundColor: "red",
       },
     ],
@@ -183,7 +203,7 @@ const DashboardChart = () => {
 
   return (
     <div>
-      <Bar data={data} options={options} style={{width: 450}}/>
+      <Bar data={data} options={options} style={{ width: 450 }} />
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Header = () => {
         width={40}
         src="https://yt3.ggpht.com/ytc/AIdro_ly3xtIB91XFXkosdKSKwBSR3Yv0LGaG42i3XFKpeERrg=s88-c-k-c0x00ffffff-no-rj"
       ></Image>
-      <Typography.Title>Aleem's DashBoard</Typography.Title>
+      <Typography.Title>DashBoard</Typography.Title>
       <Space>
         <Badge count={comments.length} dot>
           <MailOutlined
