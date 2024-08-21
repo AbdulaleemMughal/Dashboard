@@ -37,14 +37,3 @@
 .pagecontent {
   padding: 12px;
 }
-
-.dropdown {
-  padding: 5px 7px;
-  border-radius: 5px;
-  border: none;
-}
-
-.language {
-  border: 1px solid black;
-  border-radius: 5px;
-}

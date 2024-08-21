@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl";
 import SideMenu from "./SideMenu";
 import PageContent from "./PageContent";
 import Footer from "./Footer";
-import { GlobalOutlined } from '@ant-design/icons';
+import { GlobalOutlined } from "@ant-design/icons";
 
 const Header = () => {
   const [comments, setComments] = useState([]);
@@ -41,22 +41,34 @@ const Header = () => {
           <Typography.Title>
             <FormattedMessage id="dashboard" />
           </Typography.Title>
-          <Space>
-            <div className="language">
-            <GlobalOutlined />
-            <select className="dropdown" onChange={handleLocale}>
-              <option className="dropdown-item" value={LOCALES.ENGLISH}>
-                English
-              </option>
-              <option className="dropdown-item" value={LOCALES.GERMAN}>
-                German
-              </option>
-              <option className="dropdown-item" value={LOCALES.FRENCH}>
-                French
-              </option>
-            </select>
+          <Space size={10}>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <GlobalOutlined /> Select Language
+              </button>
+              <ul className="dropdown-menu dropdown-menu-light">
+                <li className="px-5" onClick={() => setLocale(LOCALES.ENGLISH)}>
+                  English
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li className="px-5" onClick={() => setLocale(LOCALES.GERMAN)}>
+                  German
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li className="px-5" onClick={() => setLocale(LOCALES.FRENCH)}>
+                  French
+                </li>
+              </ul>
             </div>
-
 
             <Badge count={comments.length} dot>
               <MailOutlined
