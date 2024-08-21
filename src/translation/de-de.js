@@ -1,0 +1,35 @@
+import { LOCALES } from "../i18n/locales";
+
+export default {
+    [LOCALES.GERMAN]: {
+        'dashboard': "Armaturenbrett",
+        "comments": "Kommentare",
+        "notifications": "Benachrichtigung",
+        "orders": "wurde bestellt.",
+        "order": "Befehl",
+        "inventory": "Inventar",
+        "customers": "Kunden",
+        "revenue": "Einnahmen",
+        "recent": "Letzte Bestellungen", 
+        "title": "Titel",
+        "quantity": "Menge",
+        "price": "Preis",
+        "barChart": "Balkendiagramm",
+        "policy": "Datenschutzrichtlinie",
+        "term":"Begriff und Nutzung",
+        "rating": "Bewertung",
+        "stock": "Aktie",
+        "brand": "Marke",
+        "warranty": "Garantie",
+        "lineChart": "Liniendiagramm",
+        "total": "Gesamt",
+        "dTotal": "Ermäßigter Gesamtbetrag",
+        "pieChart": "Kreisdiagramm",
+        "userName": "Benutzername",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefonnummer",
+        "address": "Adresse",
+    }
+};

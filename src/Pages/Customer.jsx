@@ -1,8 +1,10 @@
 import { Table, Typography, Space } from "antd";
 import React, { useEffect, useState } from "react";
 import { getCustomers } from "../utils/Api";
+import { I18Provider, LOCALES } from "../i18n";
+import { FormattedMessage } from 'react-intl';
 
-const Customer = () => {
+const Customer = ({locale}) => {
 
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
@@ -19,31 +21,32 @@ const Customer = () => {
   }, []);
 
   return (
+    <I18Provider locale={locale}>
     <Space size={20} direction="vertical">
-      <Typography.Title level={4}>Customer</Typography.Title>
+      <Typography.Title level={4}><FormattedMessage id="customers" /></Typography.Title>
       <Table columns={[
         {
-          title: "User Name",
+          title: <FormattedMessage id="userName" />,
           dataIndex: "username",
         },
         {
-          title: "First Name",
+          title: <FormattedMessage id="firstName" />,
           dataIndex: "firstName",
         },
         {
-          title: "Last Name",
+          title: <FormattedMessage id="lastName" />,
           dataIndex: "lastName",
         },
         {
-          title: "Email",
+          title: <FormattedMessage id="email" />,
           dataIndex: "email",
         },
         {
-          title: "Phone Number",
+          title: <FormattedMessage id="phone" />,
           dataIndex: "phone",
         },
         {
-          title: "Address",
+          title: <FormattedMessage id="address" />,
           dataIndex: "address",
           render: (address) => {
             return <span>{address.address}, {address.city}</span>
@@ -60,6 +63,7 @@ const Customer = () => {
 
       </Table>
     </Space>
+    </I18Provider>
   );
 };
 

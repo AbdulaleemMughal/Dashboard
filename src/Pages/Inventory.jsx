@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Rate, Space, Table, Typography } from 'antd';
+import { Card, Rate, Space, Table, Typography } from 'antd';
 import { getInventory } from '../utils/Api';
+import Linechart from '../components/Linechart';
+import { I18Provider, LOCALES } from "../i18n";
+import { FormattedMessage } from 'react-intl';
 
-const Inventory = () => {
+const Inventory = ({locale}) => {
 
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
@@ -16,37 +19,34 @@ const Inventory = () => {
   }, []);
 
   return (
-    <Space size={20} direction="vertical" style={{width: "100%"}}>
-    <Typography.Title level={4}>Inventory</Typography.Title>
+  <I18Provider locale={locale}>
+    <Typography.Title level={4}><FormattedMessage id='inventory' /></Typography.Title>
+    <Space size={20} direction="horizantal" style={{width: "100%"}}>
     <Table columns={[
       {
-        title: "Title",
+        title: <FormattedMessage id="title" />,
         dataIndex: "title",
       },
       {
-        title: "Price",
+        title: <FormattedMessage id="price" />,
         dataIndex: "price",
         render: (value) => <span>${value}</span>
       },
       {
-        title: "Rating",
+        title: <FormattedMessage id="rating" />,
         dataIndex: "rating",
         render: (rating) => <Rate value={rating} allowHalf disabled />
       },
       {
-        title: "Stock",
+        title: <FormattedMessage id="stock" />,
         dataIndex: "stock",
       },
       {
-        title: "Brand",
+        title: <FormattedMessage id="brand" />,
         dataIndex: "brand",
       },
       {
-        title: "Category",
-        dataIndex: "category",
-      },
-      {
-        title: "Warranty",
+        title: <FormattedMessage id="warranty" />,
         dataIndex: "warrantyInformation",
       }
     ]}
@@ -58,8 +58,12 @@ const Inventory = () => {
     }}
     >
     </Table>
+    <Card title={<FormattedMessage id="lineChart" />} style={{width: "600px"}}>
+            <Linechart />
+          </Card>
     </Space>
-  )
-}
+    </I18Provider>
+  );
+};
 
 export default Inventory;

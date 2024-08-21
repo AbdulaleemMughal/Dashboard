@@ -1,0 +1,35 @@
+import { LOCALES } from "../i18n/locales";
+
+export default {
+    [LOCALES.FRENCH]: {
+        "dashboard": "Tableau de bord",
+        "comments": "Commentaires",
+        "notifications": "Notification",
+        "orders": "a été commandé.",
+        "order": "commande",
+        "inventory": "Inventaire",
+        "customers": "Cliente",
+        "revenue": "Revenu",
+        "recent": "Commandes récentes", 
+        "title": "Titre",
+        "quantity": "Quantité",
+        "price": "Prix",
+        "barChart": "Graphique à barres",
+        "policy": "politique de confidentialité",
+        "term": "Conditions et utilisation",
+        "rating": "Notation",
+        "stock": "Action",
+        "brand": "Marque",
+        "warranty": "Garantie",
+        "lineChart": "Graphique linéaire",
+        "total": "Totale",
+        "dTotal": "Total actualisé",
+        "pieChart": "Graphique circulaire",
+        "userName": "Nom d'utilisateur",
+        "firstName": "Prénom",
+        "lastName": "Nom de famille",
+        "email": "E-mail",
+        "phone": "Numéro de téléphone",
+        "address": "Adresse",
+    }
+};

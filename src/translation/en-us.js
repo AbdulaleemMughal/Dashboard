@@ -1,0 +1,35 @@
+import { LOCALES } from "../i18n/locales";
+
+export default {
+    [LOCALES.ENGLISH]: {
+        "dashboard": "DashBoard",
+        "comments": "Comments",
+        "notifications": "Notifications",
+        "orders": "has been ordered.",
+        "order": "Order",
+        "inventory": "Inventory",
+        "customers": "Customers",
+        "revenue": "Revenue",
+        "recent": "Recent Orders", 
+        "title": "Title",
+        "quantity": "Quantity",
+        "price": "Price",
+        "barChart": "Bar Chart",
+        "policy": "Privacy Policy",
+        "term": "Term and Use",
+        "rating": "Rating",
+        "stock": "Stock",
+        "brand": "Brand",
+        "warranty": "Warranty",
+        "lineChart": "Line Chart",
+        "total": "Total",
+        "dTotal": "Discounted Total",
+        "pieChart": "Pie Chart",
+        "userName": "User Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "address": "Address",
+    }
+};

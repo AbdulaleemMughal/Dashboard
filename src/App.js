@@ -7,19 +7,11 @@ import Footer from "./components/Footer";
 
 function App() {
 
-  const appRoute = {
-    
-  }
-
   return (
-    <div className="App">
-      <Header />
-      <Space className="SideMenuAndPageContent">
-        <SideMenu />
-        <PageContent />
-      </Space>
-      <Footer />
-    </div>
+      <div className="App">
+        <Header />
+        
+      </div>
   );
 }
 

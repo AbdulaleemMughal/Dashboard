@@ -9,6 +9,7 @@ import {
     plugins,
     scales,
 } from "chart.js";
+import { Typography } from 'antd';
 
 ChartJS.register(
     LineElement,

@@ -1,10 +1,10 @@
 import React from 'react'
 import AppRouter from './AppRouter';
 
-const PageContent = () => {
+const PageContent = ({locale}) => {
   return (
     <div className='pagecontent'>
-      <AppRouter />
+      <AppRouter locale={locale} />
     </div>
   )
 }
